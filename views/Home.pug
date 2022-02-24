@@ -1,0 +1,19 @@
+html
+    head
+        title Contacts app
+    body
+        a(href="/contacts/new")
+            button(type="button") Add contact
+        br
+        br
+        for el, i in contacts
+            span= el.username + '  ' + el.phone_number + '  '
+            a(href=`/contacts/edit/${i}`)
+                button(type="button") Edit contact
+            a(href=`/contacts/delete/${i}`)
+                button(type="button") Delete
+            br
+        else 
+            h1 You have no contacts yet.
+
+        

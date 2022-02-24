@@ -1,0 +1,20 @@
+html 
+    head   
+        title Edit contact 
+    body 
+        form(action=`/contacts/edit/${contactId}` method='POST')
+            label(for="username") Username 
+            input(type="text" name="username" value=contact.username)
+            br
+            br
+            label(for="phone_number") Phone Number 
+            input(type="text" name="phone_number" value=contact.phone_number)
+            br
+            p= isValid
+            br
+            br
+            button(type="submit") Edit
+        
+        br
+        a(href=`/contacts/delete/${contactId}`)
+                button(type="button") Delete

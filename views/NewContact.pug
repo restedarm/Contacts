@@ -1,0 +1,16 @@
+html 
+    head   
+        title Add contact 
+    body 
+        form(action='/contacts/new' method='POST')
+            label(for="username") Username 
+            input(type="text" name="username")
+            br
+            br
+            label(for="phone_number") Phone Number 
+            input(type="text" name="phone_number")
+            br
+            p= isValid
+            br
+            br
+            button(type="submit") Add
